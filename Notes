@@ -1,0 +1,12 @@
+Worker Node: Kubelet, KubeProxy, Pod, Container Runtime
+  POD: The smallest unit of Kubernetes - The smallest component/feature of Kubernetes that will secure the application much larger.
+  Kubelet: It's the primary component on the worker node that will decide how the pod should behave or which will have all the information of the whole node to carry to the manager node(API Server component).
+
+
+Manager Node: API Server, ETCD, Control Manager, Scheduler
+  API(Application Programming Interface) Server: The component which the users will interact with. 
+  ETCD: It's like a /ETC/ of a linux system and in a Distributed system.
+        It could act like a backend of the API Server. It will be stored in a key/value format(input will be passed in that way only from the user). 
+  Control Manager: It processes the whole data that is passed. It controls the whole system with the help of different processors available within it.
+        Types: Node Manager, Replication Controller, Network Controller, Cloud Control Manager(CCM)
+  Scheduler: The control manager passes the information to the scheduler to make changes in the worker node, which will in turn update it to the API server in the Manager node itself.
