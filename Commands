@@ -29,3 +29,35 @@ OR
 In k8s version 1.19+, we can specify the --replicas option to create a deployment with 4 replicas.
 
 kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml
+
+kubectl api-resources --> lists all the resources of all kinds
+
+kubectl explain pods - explains all options of the sub-properties
+
+kubectl explain pods --recursive --> will give the whole structure of the defination file with all fields explainings
+
+check the difference b/w:
+kubectl expose service httpd --image=httpd:alpine --type=ClusterIP --port=80 --name=httpd
+kubectl run httpd --image=httpd:alpine --port=80 --expose
+
+
+
+kubectl get horizontalpodautoscalers
+You can use:
+
+kubectl get hpa
+Other common shortnames:
+
+po for pods
+deploy for deployments
+svc for services
+rs for replicasets
+cm for configmaps
+ns for namespaces
+pv for persistentvolumes
+pvc for persistentvolumeclaims
+
+
+To verify this, execute the following command:
+
+kubectl explain pod.spec
